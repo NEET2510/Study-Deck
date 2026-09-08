@@ -22,7 +22,8 @@ body {
 
 #flashcard {
     background-color: white;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     min-height: 250px;
     border-radius: 15px;
     text-align: center;
@@ -86,4 +87,19 @@ button:hover {
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+@media (max-width: 600px) {
+    /* Put your mobile-specific overrides right in here alongside your other mobile rules */
+    .input-section {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    input {
+        width: 80%;
+    }
+
+    .controls-section {
+        flex-wrap: wrap;
+    }
 }
