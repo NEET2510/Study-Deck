@@ -1,105 +1,103 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Replaced flat color with a beautiful gradient */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #333333; 
-    min-height: 100vh; 
-    
-    /* Flexbox Centering */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333333;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#app-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
+#app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
 }
 
 #flashcard {
-    background-color: white;
-    width: 90%;
-    max-width: 400px;
-    min-height: 250px;
-    border-radius: 15px;
-    text-align: center;
-    
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;  
+  background-color: white;
+  width: 90%;
+  max-width: 500px;
+  min-height: 280px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;                    
-    
-    /* Added perspective to make it exist in 3D space */
-    transform: perspective(1000px) rotateY(0deg);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  transform: perspective(1000px) rotateY(0deg);
 
-    /* Flexbox Centering */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #flashcard:hover {
-    transform: perspective(1000px) rotateY(0deg) translateY(-5px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateY(0deg) translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 #flashcard.flipping {
-    transform: perspective(1000px) rotateY(90deg) translateY(-5px);
+  transform: perspective(1000px) rotateY(90deg) translateY(-5px);
 }
 
 input {
-    padding: 10px; 
-    width: 250px;
-    border-radius: 5px;
-    border: 1px solid #cccccc; 
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
 }
 
 /* Highlights the input when you are typing in it */
 input:focus {
-    outline: none;
-    box-shadow: 0px 0px 0px 3px rgba(108, 92, 231, 0.5); 
+  outline: none;
+  box-shadow: 0px 0px 0px 3px rgba(108, 92, 231, 0.5);
 }
 
 button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #ffd32a; 
-    color: #1e272e;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffd32a;
+  color: #1e272e;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #ffda79; 
+  background-color: #ffda79;
 }
 
-.input-section, .controls-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.input-section,
+.controls-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 @media (max-width: 600px) {
-    /* Put your mobile-specific overrides right in here alongside your other mobile rules */
-    .input-section {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    input {
-        width: 80%;
-    }
+  .input-section {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    .controls-section {
-        flex-wrap: wrap;
-    }
+  input {
+    width: 80%;
+  }
+
+  .controls-section {
+    flex-wrap: wrap;
+  }
 }
